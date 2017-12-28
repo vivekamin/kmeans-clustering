@@ -50,8 +50,6 @@ for k_clusters in range(2,11,1):
         objective_fn = 0
         iterations+=1
         for k in instances:
-            #print(k)
-            #print(clusters)
             z = np.subtract(clusters,k)
             #print(z)
             z = np.square(z)
