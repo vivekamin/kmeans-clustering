@@ -38,16 +38,12 @@ for k_clusters in range(2,11,1):
             #print(k)
             #print(clusters)
             z = np.subtract(clusters,k)
-            #print(z)
             z = np.square(z)
-            #print(z)
             z = np.sum(z, axis =1)
-            #print(z)
             objective_fn+=np.amin(z)
             dist_index = np.argmin(z)
             assigned_cluster[instance_index] = dist_index
             instance_index+=1
-            #print(dist_index)
             tempC[dist_index] = tempC[dist_index] + k
             count[dist_index]+=1
         z1 = tempC / count.reshape(count.shape[0],1)
