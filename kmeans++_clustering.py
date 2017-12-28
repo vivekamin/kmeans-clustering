@@ -7,17 +7,6 @@ import numpy as np
 test = sio.loadmat('kmeans_data.mat')
 data = np.array(test['data'])
 frame = pd.DataFrame(data)
-
-# Indexs = []
-# X = frame.sample(1)
-# cl_1 = X.index[0]
-# Indexs.append(cl_1)
-# clusters = np.array(X)
-#tempCluster = clusters
-#clusters = np.concatenate((clusters,clusters[0].reshape(1,21)),axis = 0)
-#print(clusters)
-
-
 z = np.zeros(data.shape)
 def Clusters(num_of_clusters,clusters):
     temp = np.zeros(data.shape)
