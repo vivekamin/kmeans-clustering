@@ -66,9 +66,6 @@ for k_clusters in range(2,11,1):
             tempC[dist_index] = tempC[dist_index] + k
             count[dist_index]+=1
         z1 = tempC / count.reshape(count.shape[0],1)
-        #print(z1)
-        #print(clusters)
-        #clusters = z1
         if((clusters == z1).all()):
             break
         else:
