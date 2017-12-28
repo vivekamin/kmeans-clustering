@@ -51,7 +51,6 @@ for k_clusters in range(2,11,1):
         iterations+=1
         for k in instances:
             z = np.subtract(clusters,k)
-            #print(z)
             z = np.square(z)
             #print(z)
             z = np.sum(z, axis =1)
